@@ -3564,14 +3564,14 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 </net>
 <net name="ESP32_HANDSHAKE" class="0">
 <segment>
-<pinref part="U6" gate="G$1" pin="IO33"/>
-<wire x1="175.26" y1="147.32" x2="172.72" y2="147.32" width="0.1524" layer="91"/>
-<label x="172.72" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U5" gate="G$1" pin="IO21"/>
+<wire x1="91.44" y1="144.78" x2="93.98" y2="144.78" width="0.1524" layer="91"/>
+<label x="93.98" y="144.78" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U5" gate="G$1" pin="IO33"/>
-<wire x1="38.1" y1="147.32" x2="35.56" y2="147.32" width="0.1524" layer="91"/>
-<label x="35.56" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U6" gate="G$1" pin="IO21"/>
+<wire x1="228.6" y1="144.78" x2="231.14" y2="144.78" width="0.1524" layer="91"/>
+<label x="231.14" y="144.78" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -4179,20 +4179,24 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 <nets>
 <net name="RXD" class="0">
 <segment>
-<pinref part="U3" gate="G$1" pin="RXD"/>
-<wire x1="167.64" y1="96.52" x2="177.8" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="96.52" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="S3" gate="G$1" pin="I2"/>
 <wire x1="177.8" y1="93.98" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="TXD"/>
+<wire x1="167.64" y1="99.06" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="99.06" x2="175.26" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="96.52" x2="177.8" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXD" class="0">
 <segment>
-<pinref part="U3" gate="G$1" pin="TXD"/>
-<wire x1="167.64" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="99.06" x2="177.8" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="S3" gate="G$1" pin="I1"/>
 <wire x1="177.8" y1="104.14" x2="187.96" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="RXD"/>
+<wire x1="167.64" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="96.52" x2="175.26" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="99.06" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ESP32_0_TXD" class="0">
