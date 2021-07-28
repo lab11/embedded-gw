@@ -2485,18 +2485,22 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 <library name="fets">
 <description>&lt;b&gt;LAB11&lt;/b&gt; - Various transistors.</description>
 <packages>
-<package name="SOT353">
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.127" layer="21"/>
-<wire x1="-1" y1="0.625" x2="-1" y2="-0.625" width="0.127" layer="21"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.127" layer="21"/>
-<wire x1="-1" y1="-0.625" x2="1" y2="-0.625" width="0.127" layer="21"/>
-<smd name="G1" x="0.65" y="0.95" dx="0.6" dy="0.42" layer="1" rot="R90"/>
-<smd name="S" x="0" y="0.95" dx="0.6" dy="0.42" layer="1" rot="R90"/>
-<smd name="G2" x="-0.65" y="0.95" dx="0.6" dy="0.42" layer="1" rot="R90"/>
-<smd name="D2" x="-0.65" y="-0.95" dx="0.6" dy="0.42" layer="1" rot="R90"/>
-<smd name="D1" x="0.65" y="-0.95" dx="0.6" dy="0.42" layer="1" rot="R90"/>
-<text x="-1.278" y="0" size="1.016" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
-<text x="1.7905" y="0" size="1.016" layer="27" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<package name="SOT95P280X100-5N">
+<wire x1="-0.8" y1="-1.45" x2="-0.8" y2="1.45" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="1.45" x2="0.8" y2="1.45" width="0.127" layer="51"/>
+<wire x1="0.8" y1="1.45" x2="0.8" y2="-1.45" width="0.127" layer="51"/>
+<wire x1="0.8" y1="-1.45" x2="-0.8" y2="-1.45" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="1.45" x2="0.8" y2="1.45" width="0.127" layer="21"/>
+<wire x1="-0.8" y1="-1.45" x2="0.8" y2="-1.45" width="0.127" layer="21"/>
+<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="21"/>
+<circle x="-2.5" y="1" radius="0.1" width="0.2" layer="51"/>
+<text x="-1.5" y="2" size="0.8128" layer="25" font="vector" ratio="12">&gt;NAME</text>
+<text x="-1.5" y="-2.5" size="0.8128" layer="27" font="vector" ratio="12">&gt;VALUE</text>
+<smd name="1" x="-1.145" y="0.95" dx="1.32" dy="0.57" layer="1" roundness="14"/>
+<smd name="2" x="-1.145" y="0" dx="1.32" dy="0.57" layer="1" roundness="14"/>
+<smd name="3" x="-1.145" y="-0.95" dx="1.32" dy="0.57" layer="1" roundness="14"/>
+<smd name="4" x="1.145" y="-0.95" dx="1.32" dy="0.57" layer="1" roundness="14" rot="R180"/>
+<smd name="5" x="1.145" y="0.95" dx="1.32" dy="0.57" layer="1" roundness="14" rot="R180"/>
 </package>
 </packages>
 <symbols>
@@ -2577,26 +2581,22 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DMN32D2LDF" prefix="Q">
-<description>Common source dual n-channel mosfet</description>
+<deviceset name="QS5K2TR" prefix="Q">
+<description>2.5V Drive Nch+Nch MOSFET</description>
 <gates>
-<gate name="G$1" symbol="DUAL_N_MOSFET" x="0" y="0"/>
+<gate name="G$1" symbol="DUAL_N_MOSFET" x="7.62" y="7.62"/>
 </gates>
 <devices>
-<device name="" package="SOT353">
+<device name="" package="SOT95P280X100-5N">
 <connects>
-<connect gate="G$1" pin="D1" pad="D1"/>
-<connect gate="G$1" pin="D2" pad="D2"/>
-<connect gate="G$1" pin="G1" pad="G1"/>
-<connect gate="G$1" pin="G2" pad="G2"/>
-<connect gate="G$1" pin="S" pad="S"/>
+<connect gate="G$1" pin="D1" pad="5"/>
+<connect gate="G$1" pin="D2" pad="4"/>
+<connect gate="G$1" pin="G1" pad="1"/>
+<connect gate="G$1" pin="G2" pad="3"/>
+<connect gate="G$1" pin="S" pad="2"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="DIGIKEY" value="DMN32D2LDF-7DICT-ND" constant="no"/>
-<attribute name="MANUFACTURER" value="Diodes Incorporated" constant="no"/>
-<attribute name="MPN" value="DMN32D2LDF-7" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2821,7 +2821,7 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 <attribute name="DIGIKEY" value="RMCF0402JT1K00CT-ND"/>
 <attribute name="MPN" value="RMCF0402JT1K00"/>
 </part>
-<part name="Q1" library="fets" deviceset="DMN32D2LDF" device=""/>
+<part name="Q1" library="fets" deviceset="QS5K2TR" device=""/>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="D2" library="passives" deviceset="DIODE_ZENER" device="0201">
