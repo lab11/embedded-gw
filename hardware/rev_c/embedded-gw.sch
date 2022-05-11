@@ -3000,8 +3000,8 @@ Basic schematic elements and footprints for 0201, 0402, 0603, 1206, and PTH resi
 <attribute name="MPN" value="RMCF0402JT1K00"/>
 </part>
 <part name="R19" library="passives" library_urn="urn:adsk.eagle:library:29018993" deviceset="RESISTOR" device="0402_RES" package3d_urn="urn:adsk.eagle:package:29019086/1" value="47.5k">
-<attribute name="DIGIKEY" value="13-RT0402FRE0722K1LCT-ND"/>
-<attribute name="MPN" value="RT0402FRE0722K1L"/>
+<attribute name="DIGIKEY" value="13-RT0402FRE0747K5LCT-ND"/>
+<attribute name="MPN" value="RT0402FRE0747K5L"/>
 </part>
 <part name="R18" library="passives" library_urn="urn:adsk.eagle:library:29018993" deviceset="RESISTOR" device="0402_RES" package3d_urn="urn:adsk.eagle:package:29019086/1" value="22.1k">
 <attribute name="DIGIKEY" value="311-22.1KLRCT-ND"/>
